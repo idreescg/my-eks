@@ -1,6 +1,6 @@
 # AWS Load Balancer Controller Setup
 
-## Steps to Associate IAM OIDC Provider
+## Steps to install the ALB Controller into the EKS
 
 1. **Associate IAM OIDC Provider:**
     ```bash
