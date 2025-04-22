@@ -16,3 +16,7 @@
     ```bash
     helm install prometheus prometheus-community/kube-prometheus-stack --namespace monitoring --create-namespace
     ```
+4. **Retrive Password for Grafana:**
+    ```bash
+        kubectl get secret -n monitoring prometheus-grafana -o jsonpath="{.data.admin-password}" | base64 --decode
+    ```
