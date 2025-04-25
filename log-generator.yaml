@@ -1,0 +1,13 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: log-generator
+  labels:
+    app: log-generator
+spec:
+  containers:
+  - name: log-generator
+    image: busybox
+    command: ["/bin/sh", "-c"]
+    args:
+      - while true; do echo "$(date) 🔥 Hello from log-generator"; sleep 5; done
