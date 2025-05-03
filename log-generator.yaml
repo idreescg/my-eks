@@ -10,4 +10,4 @@ spec:
     image: busybox
     command: ["/bin/sh", "-c"]
     args:
-      - while true; do echo "$(date) 🔥 Hello from log-generator"; sleep 5; done
+      - while true; do case $((RANDOM % 5)) in 0) location="India";; 1) location="China";; 2) location="USA";; 3) location="Brazil";; 4) location="Germany";; esac; case $((RANDOM % 5)) in 0) greeting="Hello";; 1) greeting="Hi";; 2) greeting="Greetings";; 3) greeting="Salutations";; 4) greeting="Hey";; esac; echo "$(date) 😎👨‍💻🔥 $greeting from $location"; sleep 5; done
