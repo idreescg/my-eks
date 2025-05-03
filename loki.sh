@@ -23,7 +23,8 @@ helm upgrade --install $RELEASE_NAME $CHART_NAME \
   --set loki.image.tag=$LOKI_TAG \
   --set fluent-bit.enabled=true \
   --set promtail.enabled=true \
-  --set loki.limits_config.volume_enabled=true \
-  --set loki.limits_config.allow_structured_metadata=true
+  --set loki.config.limits_config.volume_enabled=true \
+  --set loki.config.limits_config.allow_structured_metadata=true
+
 
 echo "Loki stack setup completed."
