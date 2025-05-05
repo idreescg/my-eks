@@ -1,6 +1,7 @@
 apiVersion: v1
 kind: Pod
 metadata:
+  namespace: ahmed
   name: log-generator
   labels:
     app: log-generator
