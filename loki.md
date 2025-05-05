@@ -45,3 +45,12 @@
     ```bash
     "oidc.eks.<INSERT REGION>.amazonaws.com/id/<OIDC ID>:sub": "system:serviceaccount:loki:loki"
     ```
+5. **To Run loki:**
+   ```bash
+   helm upgrade --install loki grafana/loki --namespace loki --create-namespace -f loki-values.yaml
+   ```
+6. **To Run promtail in loki namespace:**
+   ```bash
+   helm upgrade --install promtail grafana/promtail --namespace loki --create-namespace -f promtail-values.yaml
+   ```
+   
