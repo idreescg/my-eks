@@ -46,7 +46,7 @@ serviceAccount:
   create: true
   name: loki
   annotations:
-    eks.amazonaws.com/role-arn: arn:aws:iam::AccountNum:role/LokiServiceAccountRole
+    eks.amazonaws.com/role-arn: arn:aws:iam::905418475271:role/LokiServiceAccountRole
 
 minio:
   enabled: false
