@@ -6,6 +6,10 @@
     ```bash
     http://loki-gateway.loki.svc.cluster.local/loki
     ```
+    or 
+    ```bash
+    http://loki-gateway.loki.svc.cluster.local
+    ```
 
 2. **Set Header Key and Value:**
     ```bash
@@ -46,6 +50,12 @@
     "oidc.eks.<INSERT REGION>.amazonaws.com/id/<OIDC ID>:sub": "system:serviceaccount:loki:loki"
     ```
 5. **To Run loki:**
+   ```bash
+   helm repo add grafana https://grafana.github.io/helm-charts
+   ```
+   ```bash
+   helm repo update
+   ```
    ```bash
    helm upgrade --install loki grafana/loki --namespace loki --create-namespace -f loki-values.yaml
    ```
