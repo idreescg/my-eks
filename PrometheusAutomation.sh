@@ -10,7 +10,8 @@ helm repo update
 
 # Step 3: Install Prometheus
 echo "Installing Prometheus..."
-helm install prometheus prometheus-community/kube-prometheus-stack --namespace monitoring --create-namespace
+helm install prometheus prometheus-community/kube-prometheus-stack   --namespace monitoring   --create-namespace   --set prometheus.prometheusSpec.maximumStartupDurationSeconds=300
+##helm install prometheus prometheus-community/kube-prometheus-stack --namespace monitoring --create-namespace
 
 # Step 4: Retrieve Password for Grafana
 echo "Retrieving Grafana admin password..."
